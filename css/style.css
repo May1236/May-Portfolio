@@ -75,7 +75,7 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--text);line-height:1.05;font-wei
 .eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--text-mute)}
 
 /* ---------- custom cursor ---------- */
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:normal;opacity:0;transition:opacity .3s}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:normal;opacity:0;transition:opacity .2s;will-change:transform}
 .cursor-dot{width:7px;height:7px;background:var(--accent);transform:translate(-50%,-50%)}
 .cursor-ring{width:38px;height:38px;border:1.5px solid var(--stroke);transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease),background .3s,border-color .3s,opacity .3s}
 .cursor-ring.hot{width:62px;height:62px;background:color-mix(in srgb,var(--accent) 16%,transparent);border-color:var(--accent)}
@@ -182,8 +182,9 @@ body.cursor-on a,body.cursor-on button{cursor:none}
 /* ---------- work (editorial list w/ hover preview) ---------- */
 .work-list{border-top:1px solid var(--hair)}
 .work-row{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:26px;
-  padding:clamp(24px,3.4vw,40px) 6px;border-bottom:1px solid var(--hair);transition:padding-left .5s var(--ease)}
-.work-row:hover{padding-left:24px}
+  padding:clamp(24px,3.4vw,40px) 6px;border-bottom:1px solid var(--hair)}
+.work-row>span{transition:transform .4s var(--ease)}
+.work-row:hover>span{transform:translate3d(18px,0,0)}
 .work-row .wno{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--accent);width:34px}
 .work-row .wmain{display:flex;flex-direction:column;gap:6px}
 .work-row .wtitle{font-family:var(--serif);font-size:clamp(1.7rem,4.6vw,3rem);color:var(--text);line-height:1;transition:color .3s,transform .5s var(--ease)}
@@ -194,10 +195,12 @@ body.cursor-on a,body.cursor-on button{cursor:none}
 .work-row .wthumb{display:none}
 /* floating preview (desktop) */
 .work-preview{position:fixed;top:0;left:0;width:clamp(220px,22vw,320px);aspect-ratio:4/3;border-radius:14px;overflow:hidden;
-  pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.8) rotate(-4deg);
-  box-shadow:var(--shadow);transition:opacity .4s var(--ease),transform .5s var(--ease);border:1px solid var(--hair)}
-.work-preview.show{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}
-.work-preview img{width:100%;height:100%;object-fit:cover}
+  pointer-events:none;z-index:40;opacity:0;background:var(--surface);
+  transform:translate3d(calc(var(--preview-x, -1000px) - 50%),calc(var(--preview-y, -1000px) - 50%),0);scale:.94;
+  box-shadow:var(--shadow-sm);transition:opacity .18s ease,scale .18s var(--ease);
+  border:1px solid var(--hair);will-change:transform,opacity;contain:strict}
+.work-preview.show{opacity:1;scale:1}
+.work-preview img{width:100%;height:100%;object-fit:contain;object-position:center}
 @media(hover:none),(max-width:780px){
   .work-preview{display:none}
   .work-row{grid-template-columns:auto 1fr;gap:18px}
