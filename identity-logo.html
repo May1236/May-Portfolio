@@ -7,18 +7,18 @@
 <meta name="description" content="The personal monogram of May (Phuong Tran) — a hand-drawn identity that anchors the whole portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script>(function(){try{var t=localStorage.getItem('may-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('may-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia' fill='%23D9920E'>M</text></svg>">
 </head>
 <body>
 <nav class="nav">
-  <a href="index.html" class="brand">May<span class="dot">.</span></a>
+  <a href="index.html" class="brand">May</a>
   <div class="nav-right">
     <div class="nav-links">
       <a href="index.html">Work</a><a href="about.html">About</a><a href="art.html">Art</a><a href="posters.html">Posters</a>
-      <a href="index.html#contact" class="btn btn--amber nav-cta">Get in touch</a>
+      <a href="index.html#contact" class="btn btn--amber nav-cta">Contact Me <span class="arrow">↗</span></a>
     </div>
     <button class="theme-toggle" aria-label="Toggle light / dark">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.5 4.5l1.5 1.5M18 18l1.5 1.5M19.5 4.5L18 6M6 18l-1.5 1.5"/></svg>
@@ -106,8 +106,25 @@
 </section>
 
 <div class="wrap next-proj">
-  <div><small>Next project</small></div>
-  <a href="art.html">Paintings <span>→</span></a>
+  <small>Next project</small>
+  <div class="next-card-row">
+    <a href="art.html" class="next-card">
+      <div class="next-card-media"><img src="assets/img/art-flowers-sky.jpg" alt="Painting collection preview" loading="lazy"><span class="next-card-thumb"><img src="assets/img/art-royal-cat.jpg" alt="Cat painting preview" loading="lazy"></span></div>
+      <div class="next-card-copy"><h3>Paintings</h3><p>Hand-painted visual stories exploring colour, mood and character.</p><span class="next-card-arrow">→</span></div>
+    </a>
+    <a href="posters.html" class="next-card">
+      <div class="next-card-media"><img src="assets/img/poster-design-1.jpg" alt="Nature poster collection preview" loading="lazy"><span class="next-card-thumb"><img src="assets/img/poster-fuji.jpg" alt="Poster inspiration preview" loading="lazy"></span></div>
+      <div class="next-card-copy"><h3>Posters</h3><p>A nature-inspired poster system translating landscapes into a visual collection.</p><span class="next-card-arrow">→</span></div>
+    </a>
+    <a href="eterna-bloom.html" class="next-card">
+      <div class="next-card-media"><img src="assets/img/eterna-mockup-1.jpg" alt="Eterna Bloom brand preview" loading="lazy"><span class="next-card-thumb"><img src="assets/img/eterna-logo.jpg" alt="Eterna Bloom logo preview" loading="lazy"></span></div>
+      <div class="next-card-copy"><h3>Eterna Bloom</h3><p>A handcrafted floral brand identity and emotional campaign system.</p><span class="next-card-arrow">→</span></div>
+    </a>
+    <a href="unidbite.html" class="next-card">
+      <div class="next-card-media"><img src="assets/img/unidbite-hifi.jpg" alt="Unidbite app interface preview" loading="lazy"><span class="next-card-thumb"><video src="assets/video/unidbite-demo.mp4" autoplay muted loop playsinline preload="metadata"></video></span></div>
+      <div class="next-card-copy"><h3>Unidbite</h3><p>A student-powered food discovery app shaped through brand and UX/UI.</p><span class="next-card-arrow">→</span></div>
+    </a>
+  </div>
 </div>
 
 <footer class="footer wrap">

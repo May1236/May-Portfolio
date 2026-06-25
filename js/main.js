@@ -40,7 +40,7 @@
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal, .divider-line').forEach(function (el) { io.observe(el); });
+  document.querySelectorAll('.reveal, .divider-line, .cap-card').forEach(function (el) { io.observe(el); });
 
   /* ---------- Hand-drawn line setup ---------- */
   function setLen(path) {
@@ -266,6 +266,33 @@
     var close = function () { lb.classList.remove('open'); document.body.style.overflow = ''; };
     lb.addEventListener('click', close);
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  }
+
+  /* ---------- BlurText headline (word-by-word blur-in) ---------- */
+  document.querySelectorAll('.blurtext[data-text]').forEach(function (el) {
+    var parts = el.getAttribute('data-text').split('|');
+    el.textContent = '';
+    parts.forEach(function (w, i) {
+      var raw = w.trim(); if (!raw) return;
+      var span = document.createElement('span');
+      span.className = 'bw';
+      if (raw.charAt(0) === '@') { span.classList.add('am'); raw = raw.slice(1); }
+      span.innerHTML = raw;
+      span.style.animationDelay = (0.35 + i * 0.12) + 's';
+      el.appendChild(span);
+    });
+    if (reduced) { el.querySelectorAll('.bw').forEach(function (s) { s.style.opacity = 1; s.style.filter = 'none'; s.style.transform = 'none'; }); }
+    else { requestAnimationFrame(function () { el.querySelectorAll('.bw').forEach(function (s) { s.classList.add('in'); }); }); }
+  });
+
+  /* ---------- Hero video fade-in (graceful if it can't load) ---------- */
+  var hv = document.querySelector('.hero-video');
+  if (hv) {
+    var showVid = function () { hv.classList.add('ready'); };
+    if (hv.readyState >= 2) showVid();
+    hv.addEventListener('loadeddata', showVid);
+    hv.addEventListener('canplay', function () { var p = hv.play(); if (p && p.catch) p.catch(function () {}); });
+    hv.addEventListener('error', function () { hv.style.display = 'none'; });
   }
 
   /* ---------- Active nav link + year ---------- */

@@ -7,10 +7,10 @@
 <meta name="description" content="Portfolio of May (Phuong Tran) — a multidisciplinary designer, artist and brand builder. Branding, UX/UI, illustration & motion. One continuous line.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia' fill='%23D9920E'>M</text></svg>">
-<script>(function(){try{var t=localStorage.getItem('may-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('may-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
 
@@ -23,14 +23,14 @@
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="index.html" class="brand">May<span class="dot">.</span></a>
+  <a href="index.html" class="brand">May</a>
   <div class="nav-right">
     <div class="nav-links">
       <a href="index.html">Work</a>
       <a href="about.html">About</a>
       <a href="art.html">Art</a>
       <a href="posters.html">Posters</a>
-      <a href="index.html#contact" class="btn btn--amber nav-cta">Get in touch</a>
+      <a href="index.html#contact" class="btn btn--amber nav-cta">Contact Me <span class="arrow">↗</span></a>
     </div>
     <button class="theme-toggle" aria-label="Toggle light / dark">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.5 4.5l1.5 1.5M18 18l1.5 1.5M19.5 4.5L18 6M6 18l-1.5 1.5"/></svg>
@@ -40,28 +40,25 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-glow glow-1"></div>
-  <div class="hero-glow glow-2"></div>
-  <svg class="sig" viewBox="0 0 520 400" aria-hidden="true">
-    <path id="sigPath" d="M70,300 C70,180 90,120 120,120 C150,120 150,250 130,300 C118,330 150,300 175,250 C200,200 205,300 230,300 C255,300 255,160 250,140 C245,160 245,300 270,300 C300,300 300,210 330,170 M330,170 C355,140 360,250 345,300 C335,330 330,360 300,375"/>
-  </svg>
+<!-- HERO (cinematic video) -->
+<header class="hero cine">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto"
+    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_094631_d30ab262-45ee-4b7d-99f3-5d5848c8ef13.mp4"></video>
+  <div class="hero-sun"></div>
   <div class="wrap hero-inner">
-    <p class="hero-eyebrow eyebrow"><span class="ln"></span>Phuong Tran — Calgary, Canada</p>
-    <h1>
-      <span class="line l1"><span>Designer,</span></span>
-      <span class="line l2"><span>artist &amp; <em>brand</em></span></span>
-      <span class="line l3"><span>builder.</span></span>
-    </h1>
-    <p class="hero-sub">One continuous line of thinking — from emotion and business goals to identities, interfaces and visual worlds that feel effortless and stay consistent.</p>
-    <div class="hero-tags"><span>Magnetic</span><span>Airy</span><span>Yielding</span></div>
-    <div class="hero-actions">
-      <a href="#work" class="btn" data-magnet>See the work <span class="arrow">→</span></a>
-      <a href="about.html" class="btn btn--ghost" data-magnet>About me</a>
+    <h1 class="blurtext" data-text="Phuong |Tran"></h1>
+    <p class="hero-sub-c">From emotion and business goals to identities, interfaces and visual worlds — I shape brands that feel effortless and stay consistent across every touchpoint.</p>
+    <div class="hero-cta-row">
+      <a href="#work" class="hero-mini-card" data-magnet>
+        <span>See the work</span>
+        <small>Projects, design systems and still paintings.</small>
+      </a>
+      <a href="#motion" class="hero-mini-card" data-magnet>
+        <span>View showreel</span>
+        <small>Animations, motion graphics and video pieces.</small>
+      </a>
     </div>
   </div>
-  <div class="scroll-hint"><span>Scroll</span><span class="bar"></span></div>
 </header>
 
 <!-- STATEMENT -->
@@ -124,11 +121,56 @@
 
 <svg class="divider-line" viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0,12 C200,4 380,20 600,12 C820,4 1000,20 1200,12"/></svg>
 
-<!-- 02 · MOTION -->
+<!-- 02 · CAPABILITIES (liquid glass) -->
+<section class="caps" id="capabilities">
+  <div class="wrap">
+    <p class="cap-kicker reveal">// What I do</p>
+    <h2 class="reveal">Many tools, <span class="serif-italic">one mind.</span></h2>
+    <div class="cap-grid">
+      <article class="cap-card glass">
+        <div class="cap-top">
+          <div class="cap-icon glass"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0 0 18c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.42-4.03-8-9-8Zm-5.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3-4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm3 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg></div>
+          <div class="cap-tags">
+            <span class="glass-chip">Logo Systems</span><span class="glass-chip">Colour &amp; Type</span>
+            <span class="glass-chip">Guidelines</span><span class="glass-chip">Positioning</span>
+          </div>
+        </div>
+        <h3>Brand &amp; Identity</h3>
+        <p>I build identities from the inside out — strategy, logo, colour and type woven into one consistent, recognizable system.</p>
+      </article>
+
+      <article class="cap-card glass">
+        <div class="cap-top">
+          <div class="cap-icon glass"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5q0-.825.588-1.412T6 3h12q.825 0 1.413.588T20 5v14q0 .825-.587 1.413T18 21H6q-.825 0-1.412-.587T4 19V5Zm2 3h12V5H6v3Zm4 2H6v9h4v-9Zm2 9h6v-9h-6v9Z"/></svg></div>
+          <div class="cap-tags">
+            <span class="glass-chip">Research</span><span class="glass-chip">Wireframes</span>
+            <span class="glass-chip">Hi-Fi Prototypes</span><span class="glass-chip">Design Systems</span>
+          </div>
+        </div>
+        <h3>Product &amp; UX/UI</h3>
+        <p>From research to clickable prototypes — interfaces that are clear, accessible and unmistakably on-brand, with the words to match.</p>
+      </article>
+
+      <article class="cap-card glass">
+        <div class="cap-top">
+          <div class="cap-icon glass"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.4 5.2L20 8l-4 4.1.9 5.9L12 15.4 7.1 18l.9-5.9L4 8l5.6-.8L12 2Z"/></svg></div>
+          <div class="cap-tags">
+            <span class="glass-chip">Painting</span><span class="glass-chip">Character</span>
+            <span class="glass-chip">Motion Graphics</span><span class="glass-chip">Short Video</span>
+          </div>
+        </div>
+        <h3>Art &amp; Motion</h3>
+        <p>Hand-painted artwork, character work and motion that give a brand a living voice — the artist half of my practice.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · MOTION -->
 <section class="chapter" id="motion">
   <div class="wrap">
     <div class="chapter-head reveal">
-      <span class="chapter-no">02</span>
+      <span class="chapter-no">03</span>
       <h2>In <span class="uline">motion<svg viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M3,8 C40,3 80,11 120,6 C150,3 180,9 197,6"/></svg></span></h2>
       <p class="meta">Where branding meets movement — animation, motion graphics and short-form video.</p>
     </div>
@@ -155,11 +197,11 @@
 
 <svg class="divider-line" viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0,12 C220,20 400,4 600,12 C800,20 1000,4 1200,12"/></svg>
 
-<!-- 03 · ABOUT -->
+<!-- 04 · ABOUT -->
 <section class="chapter dark-panel" id="about">
   <div class="wrap">
     <div class="chapter-head reveal">
-      <span class="chapter-no">03</span>
+      <span class="chapter-no">04</span>
       <h2>The short <span class="uline">version<svg viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M3,7 C50,11 90,3 130,7 C160,10 185,5 197,7"/></svg></span></h2>
     </div>
     <div class="about-grid">
@@ -205,7 +247,6 @@
 
 <div class="work-preview" aria-hidden="true"><img src="" alt="" decoding="async"></div>
 <div class="lightbox" id="lightbox"><img src="" alt=""></div>
-<div class="cursor-ring"></div><div class="cursor-dot"></div>
 <script src="js/main.js"></script>
 </body>
 </html>
